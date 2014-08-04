@@ -595,7 +595,7 @@ x-amz-acl: <Canned-ACL> #请参照《ACL》
         
           <tr>
             <td>x-amz-acl</td>
-            <td>创建Bucket的同时，设置一个ACL。请参照：<a href="/?c=doc&amp;a=guide&amp;section=acl">《ACL》</a></td>
+            <td>创建Bucket的同时，设置一个ACL。请参照：<a href="http://open.sinastorage.com/?c=doc&a=guide&section=acl">《ACL》</a></td>
             <td>No</td>
           </tr>
                     
