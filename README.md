@@ -626,7 +626,7 @@ curl -v -X PUT "http://sinastorage.cn/<Your-Bucket-Name>/?KID=sina,<access_key>&
 
 ### DELETE Bucket
  - 描述：删除指定Bucket。
- - 注意：不能删除非空Bucket。
+ - <spna style="color:red;">注意：不能删除非空Bucket。</span>
  - 请求格式：
 ```http
 DELETE /?formatter=json HTTP/1.1
