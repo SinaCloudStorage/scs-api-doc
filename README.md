@@ -1446,7 +1446,7 @@ Content-Disposition: form-data; name="submit"
   - 将最终的值设置到表单Signature的value中。
  - 最终生成的html表单：
 ```html
-<form method="post" action="http://my-bucket.<?=c('api_host');?>/" enctype="multipart/form-data">
+<form method="post" action="http://my-bucket.sinastorage.cn/" enctype="multipart/form-data">
     <input type="hidden" name="AWSAccessKeyId" value="您的accesskey" />
     <input type="hidden" name="key" value="my_prefix/${filename}" />
     <input type="hidden" name="acl" value="private" />
