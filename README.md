@@ -98,14 +98,49 @@ Authorization: <authorization string> #请参照《签名算法》
 }
 ```
  - 返回值说明：
-| Name | Description |  
-| --- | --- | 
-| Owner | 所有者 |
-| Owner.ID | 所有者的UserId |
-| Buckets | Buckets列表，下一级为数组 |
-| Buckets.Name | Bucket名称 |
-| Buckets.ConsumedBytes | 当前Bucket已占用空间 |
-| Buckets.CreationDate | 当前Bucket创建时间 |
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+            <td>Owner</td>
+            <td>所有者</td>
+          </tr>
+          
+          <tr>
+            <td>Owner.ID</td>
+            <td>所有者的UserId</td>
+          </tr>
+          
+          <tr>
+            <td>Buckets</td>
+            <td>Buckets列表，下一级为数组</td>
+          </tr>
+          
+          
+          <tr>
+            <td>Buckets.Name</td>
+            <td>Bucket名称</td>
+          </tr>
+          
+          <tr>
+            <td>Buckets.ConsumedBytes</td>
+            <td>当前Bucket已占用空间</td>
+          </tr>
+          
+          <tr>
+            <td>Buckets.CreationDate</td>
+            <td>当前Bucket创建时间</td>
+          </tr>
+          
+       
+        </tbody>
+</table>
 
  - 请求示例：
 ``` 
@@ -172,12 +207,43 @@ Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
  - 请求参数：
-|Parameter   |	Description|	Required|
-| --------   | :-----------|------------|
-|delimiter	 | 折叠显示字符。通常使用：‘/’|	No|
-|marker      | Key的初始位置，系统将列出比Key大的值，通常用作‘分页’的场景|	No|
-|max-keys|	返回值的最大Key的数量。默认为400|	No|
-|prefix	|列出以指定字符为开头的Key|	No|
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+            <td>delimiter</td>
+            <td>折叠显示字符。通常使用：‘/’</td>
+            <td>No</td>
+          </tr>
+          
+          <tr>
+            <td>marker</td>
+            <td>Key的初始位置，系统将列出比Key大的值，通常用作‘分页’的场景</td>
+            <td>No</td>
+          </tr>
+          
+          <tr>
+            <td>max-keys</td>
+            <td>返回值的最大Key的数量。默认为400</td>
+            <td>No</td>
+          </tr>
+          
+          <tr>
+            <td>prefix</td>
+            <td>列出以指定字符为开头的Key</td>
+            <td>No</td>
+          </tr>
+          
+       
+        </tbody>
+    </table>
 
 响应格式举例（HTTP Body）：
 ```json
@@ -243,24 +309,97 @@ Authorization: <authorization string> #请参照《签名算法》
 }
 ```
  - 返回值说明：
-|Name|	Description|
-|----|:------------|
-|Contents|	Object的Metadata数组|
-|CommonPrefixes|	折叠以后的Prefix，下一级是Prefix数组|
-|Delimiter|	当前使用的折叠字符|
-|Prefix	|当前使用的前缀|
-|Marker	|当前使用的Marker|
-|ContentsQuantity	|Contents中元素个数|
-|CommonPrefixesQuantity	|CommonPrefixes中元素个数|
-|NextMarker	|下一页的Marker|
-|IsTruncated|	是否还有下一页|
-|SHA1|	文件内容的sha1值|
-|Name|	Object的Key(文件名)|
-|Last-Modified|	Object的最后修改时间|
-|Owner|	Object的拥有者|
-|MD5|	文件内容的md5值|
-|Content-Type|	文件的mime type|
-|Size|	文件的大小(字节)|
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+            <td>Contents</td>
+            <td>Object的Metadata数组</td>
+          </tr>
+          
+          <tr>
+            <td>CommonPrefixes</td>
+            <td>折叠以后的Prefix，下一级是Prefix数组</td>
+          </tr>
+          
+          <tr>
+            <td>Delimiter</td>
+            <td>当前使用的折叠字符</td>
+          </tr>
+          
+          <tr>
+            <td>Prefix</td>
+            <td>当前使用的前缀</td>
+          </tr>
+          
+          <tr>
+            <td>Marker</td>
+            <td>当前使用的Marker</td>
+          </tr>
+          
+          <tr>
+            <td>ContentsQuantity</td>
+            <td>Contents中元素个数</td>
+          </tr>
+          
+          <tr>
+            <td>CommonPrefixesQuantity</td>
+            <td>CommonPrefixes中元素个数</td>
+          </tr>
+          
+          <tr>
+            <td>NextMarker</td>
+            <td>下一页的Marker</td>
+          </tr>
+          
+          <tr>
+            <td>IsTruncated</td>
+            <td>是否还有下一页</td>
+          </tr>
+          
+          <tr>
+            <td>SHA1</td>
+            <td>文件内容的sha1值</td>
+          </tr>
+          
+          <tr>
+            <td>Name</td>
+            <td>Object的Key(文件名)</td>
+          </tr>
+                    
+          <tr>
+            <td>Last-Modified</td>
+            <td>Object的最后修改时间</td>
+          </tr>
+          
+          <tr>
+            <td>Owner</td>
+            <td>Object的拥有者</td>
+          </tr>
+          
+          <tr>
+            <td>MD5</td>
+            <td>文件内容的md5值</td>
+          </tr>
+          
+          <tr>
+            <td>Content-Type</td>
+            <td>文件的mime type</td>
+          </tr>
+          
+          <tr>
+            <td>Size</td>
+            <td>文件的大小(字节)</td>
+          </tr>
+          
+        </tbody>
+    </table>
 
  - 应用举例：
 假设某Bucket下有如下文件(为方便说明，没有显示为json格式，仅表现其中的一些有用信息，以下同)：
@@ -444,9 +583,24 @@ Authorization: <authorization string> #请参照《签名算法》
 x-amz-acl: <Canned-ACL> #请参照《ACL》
 ```
  - Request Header（请求头）：
-|Name	|Description	|Required|
-|-------|---------------|--------|
-|x-amz-acl	|创建Bucket的同时，设置一个ACL。请参照：[《ACL》][2]	|No|
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+            <td>x-amz-acl</td>
+            <td>创建Bucket的同时，设置一个ACL。请参照：<a href="/?c=doc&amp;a=guide&amp;section=acl">《ACL》</a></td>
+            <td>No</td>
+          </tr>
+                    
+        </tbody>
+    </table>
 
  - 响应（无HTTP Body）：
 ```http
@@ -1770,18 +1924,89 @@ X-Requester: Your UserId
 }
 ```
  - 返回值说明：
-|Name	|Description|
-|-------|-----------|
-|Info	|创建object时设置的 x-sina-info 值。|
-|File-Name	|object key （文件名）。|
-|Info-Int	|创建object时设置的 x-sina-info-int 值。|
-|Content-MD5	|文件内容的 MD5 值。|
-|Content-SHA1	|文件内容的 SHA1 值。|
-|Last-Modified	|文件的最后修改时间。|
-|Owner	|文件的所有者。|
-|Type	|文件的mime-type。|
-|File-Meta	|创建文件时设置的x-amz-meta-*值，下一级为key-value数组。|
-|Size	|文件的大小（bytes）。|
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+            <td>Info</td>
+            <td>
+            	创建object时设置的 x-sina-info 值。
+            </td>
+          </tr>
+          
+          <tr>
+            <td>File-Name</td>
+            <td>
+            	object key （文件名）。
+            </td>
+          </tr>
+          
+          <tr>
+            <td>Info-Int</td>
+            <td>
+            	创建object时设置的 x-sina-info-int 值。
+            </td>
+          </tr> 
+          
+          <tr>
+            <td>Content-MD5</td>
+            <td>
+            	文件内容的 MD5 值。
+            </td>
+          </tr> 
+          
+          <tr>
+            <td>Content-SHA1</td>
+            <td>
+            	文件内容的 SHA1 值。
+            </td>
+          </tr>
+          
+          
+          <tr>
+            <td>Last-Modified</td>
+            <td>
+            	文件的最后修改时间。
+            </td>
+          </tr>
+          
+          
+          <tr>
+            <td>Owner</td>
+            <td>
+            	文件的所有者。
+            </td>
+          </tr>
+          
+          <tr>
+            <td>Type</td>
+            <td>
+            	文件的mime-type。
+            </td>
+          </tr>
+          
+          <tr>
+            <td>File-Meta</td>
+            <td>
+            	创建文件时设置的x-amz-meta-*值，下一级为key-value数组。
+            </td>
+          </tr>    
+          
+          <tr>
+            <td>Size</td>
+            <td>
+            	文件的大小（bytes）。
+            </td>
+          </tr>
+          
+        </tbody>
+    </table>
 
  - 请求示例：
 ```
@@ -1965,10 +2190,30 @@ X-Requester: Your UserId
 Etag: <Etag>
 ```
 - 请求参数(QueryString)：
-|Parameter	|Description	|Required|
-|-----------|---------------|--------|
-|partNumber	|文件分片的序号，从1开始	|Yes|
-|uploadId	|通过Initiate Multipart Upload（大文件分片上传初始化接口）获得的uploadId值	|Yes|
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+            <td>partNumber</td>
+            <td>文件分片的序号，从1开始</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>uploadId</td>
+            <td>通过Initiate Multipart Upload（大文件分片上传初始化接口）获得的uploadId值</td>
+            <td>Yes</td>
+          </tr>
+       
+        </tbody>
+    </table>
  - - 注意：分片数不能超过2048。
 
 
@@ -2020,16 +2265,50 @@ X-RequestId: 00078d50-1404-0810-5947-782bcb10b128
 X-Requester: Your UserId
 ```
  - 请求参数(QueryString)：
-|Parameter	|Description	|Required|
-|-------	|-----------	|--------|
-|uploadId	|通过Initiate Multipart Upload（大文件分片上传初始化接口）获得的uploadId值	|Yes|
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+            <td>uploadId</td>
+            <td>通过Initiate Multipart Upload（大文件分片上传初始化接口）获得的uploadId值</td>
+            <td>Yes</td>
+          </tr>
+       
+        </tbody>
+ </table>
 
  - Body内容说明（json格式）：
-
-|Name	|Description	|Required|
-|-------|-----------	|--------|
-|PartNumber	|文件分片的序号	|Yes|
-|ETag	|通过Upload Part（上传分片接口）上传成功后返回的响应头中的Etag值	|Yes|
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+            <td>PartNumber</td>
+            <td>文件分片的序号</td>
+            <td>Yes</td>
+          </tr>
+          
+          <tr>
+            <td>ETag</td>
+            <td>通过Upload Part（上传分片接口）上传成功后返回的响应头中的Etag值</td>
+            <td>Yes</td>
+          </tr>
+       
+        </tbody>
+</table>
   
 ### List Parts
  - 描述：列出已经上传的所有分块
@@ -2088,9 +2367,24 @@ X-Requester: Your UserId
 }
 ```
 - 请求参数(QueryString)：
-|Parameter	|Description	|Required|
-|-------	|-----------	|--------|
-|uploadId	|通过Initiate Multipart Upload（大文件分片上传初始化接口）获得的uploadId值	|Yes|
+<table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+            <td>uploadId</td>
+            <td>通过Initiate Multipart Upload（大文件分片上传初始化接口）获得的uploadId值</td>
+            <td>Yes</td>
+          </tr>
+       
+        </tbody>
+</table>
 
 
 [1]: http://open.sinastorage.com/?c=doc&a=guide&section=sign
