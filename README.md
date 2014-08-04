@@ -26,7 +26,7 @@
 
 ### [Bucket操作](#bucket操作-1)
 * [GET Bucket (List Objects)](#get-bucket-list-objects)
-* [GET Bucket - Meta](#get-bucket-meta)
+* [GET Bucket - Meta](#get-bucket--meta)
 * [PUT Bucket](#put-bucket)
 * [DELETE Bucket](#delete-bucket)
 * [GET Bucket ACL](#get-bucket-acl)
@@ -37,10 +37,10 @@
 * [GET Object](#get-object)
 * [PUT Object](#put-object)
 * [POST Object](#post-object)
-* [PUT Object - Copy](#put-object-copy)
-* [PUT Object - Relax](#put-object-relax)
-* [PUT Object - Meta](#put-object-meta)
-* [GET Object - Meta](#get-object-meta)
+* [PUT Object - Copy](#put-object--copy)
+* [PUT Object - Relax](#put-object--relax)
+* [PUT Object - Meta](#put-object--meta)
+* [GET Object - Meta](#get-object--meta)
 * [DELETE Object](#delete-object)
 * [GET Object ACL](#get-object-acl)
 * [PUT Object ACL](#put-object-acl)
@@ -98,14 +98,14 @@ Authorization: <authorization string> #请参照《签名算法》
 }
 ```
  - 返回值说明：
-| Name        | Description                 |  
-| --------   | :----------------------------| 
-|Owner       |	                      所有者|
-|Owner.ID    |	              所有者的UserId|
-|Buckets     |	   Buckets列表，下一级为数组|
-|Buckets.Name|	                  Bucket名称|
-|Buckets.ConsumedBytes|	当前Bucket已占用空间|
-|Buckets.CreationDate |	  当前Bucket创建时间|
+| Name | Description |  
+| --- | --- | 
+| Owner | 所有者 |
+| Owner.ID | 所有者的UserId |
+| Buckets | Buckets列表，下一级为数组 |
+| Buckets.Name | Bucket名称 |
+| Buckets.ConsumedBytes | 当前Bucket已占用空间 |
+| Buckets.CreationDate | 当前Bucket创建时间 |
 
  - 请求示例：
 ``` 
