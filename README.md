@@ -68,7 +68,7 @@ Authorization: <authorization string> #请参照《签名算法》
 GET /<Your-Bucket-Name>/?formatter=json HTTP/1.1
 Host: sinastorage.cn
 Date: <date>
-Authorization: <authorization string> #请参照[《签名算法》][1]
+Authorization: <authorization string> #请参照《签名算法》
 ```
  - 响应格式（HTTP Body）：
 ```json
