@@ -1058,7 +1058,7 @@ x-amz-meta-foo2: <value2> #自定义meta：foo2
 curl -v -H "Range: bytes=0-1024" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/<Object-Name>?formatter=json"
 ```
  - 应用举例：
-  - 标准示例：
+  * 标准示例：
 ```http
 GET /my_bucket/path/to/my/file.txt?formatter=json HTTP/1.1
 Host: sinastorage.cn
@@ -1066,7 +1066,7 @@ Date: Sun, 1 Jan 2006 12:00:00 GMT
 Authorization: SINA AccessKey:ssig
 Range: bytes=100-2048
 ```
-  - 响应：
+  * 响应：
 ```http
 HTTP/1.1 206 Partial Content
 x-amz-id-2: id
@@ -1084,14 +1084,14 @@ x-amz-meta-foo: foo_value
 file_content
 ...
 ```
-   - 使用各种验证措施的下载方式：
+   * 使用各种验证措施的下载方式：
 ```http
 GET /path/to/my/file.txt?KID=sae,youraccount&Expires=1175139620&ssig=your_ssig&ip=time,ipaddress&fn=filename.txt&formatter=json HTTP/1.1
 Host: my_bucket.sinastorage.cn
 Date: date
 Range: bytes=byte_range
 ```
-  - 响应：
+  * 响应：
 ```http
 HTTP/1.1 206 Partial Content
 x-amz-id-2: id
