@@ -1066,6 +1066,7 @@ Date: Sun, 1 Jan 2006 12:00:00 GMT
 Authorization: SINA AccessKey:ssig
 Range: bytes=100-2048
 ```
+ -
   * 响应：
 ```http
 HTTP/1.1 206 Partial Content
@@ -1084,6 +1085,7 @@ x-amz-meta-foo: foo_value
 file_content
 ...
 ```
+ -
    * 使用各种验证措施的下载方式：
 ```http
 GET /path/to/my/file.txt?KID=sae,youraccount&Expires=1175139620&ssig=your_ssig&ip=time,ipaddress&fn=filename.txt&formatter=json HTTP/1.1
@@ -1091,6 +1093,7 @@ Host: my_bucket.sinastorage.cn
 Date: date
 Range: bytes=byte_range
 ```
+ -
   * 响应：
 ```http
 HTTP/1.1 206 Partial Content
