@@ -1,7 +1,7 @@
 # 新浪云存储API文档
 ------
 ## 概述
-> 我们提供了一套兼容AmazonS3的RESTful API，可以使您更加自由地开发出灵活的功能。
+> 我们提供了一套兼容[AmazonS3][4]的RESTful API，可以使您更加自由地开发出灵活的功能。
 >
 > 新浪云存储服务主要提供以下三类API：
 >
@@ -2393,3 +2393,4 @@ X-Requester: Your UserId
 [1]: http://open.sinastorage.com/?c=doc&a=guide&section=sign
 [2]: http://open.sinastorage.com/?c=doc&a=guide&section=acl
 [3]: http://open.sinastorage.com/?c=doc&a=guide#limitations
+[4]: http://s3.amazon.com/
