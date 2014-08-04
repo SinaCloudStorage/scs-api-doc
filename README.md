@@ -626,7 +626,7 @@ curl -v -X PUT "http://sinastorage.cn/<Your-Bucket-Name>/?KID=sina,<access_key>&
 
 ### DELETE Bucket
  - 描述：删除指定Bucket。
- - * 注意：不能删除非空Bucket。*
+ - ***注意：不能删除非空Bucket。***
  - 请求格式：
 ```http
 DELETE /?formatter=json HTTP/1.1
@@ -1457,7 +1457,7 @@ Content-Disposition: form-data; name="submit"
     <input type="submit" value="上传" />
 </form>
 ```
- - * 注意事项：*
+ - ***注意事项：***
   - POST请求后的uri只能是“/”
   - success_action_redirect：指定上传成功后客户端重定向的URL。
   - key：变量${filename}将被自动替换成被上传文件的文件名；当然也可以直接指定被上传文件存储在Sinastorage的文件名。
@@ -1753,7 +1753,7 @@ curl -v -X PUT -H "s-sina-sha1: 00fd4b4549a1094aae926ef62e9dbd3cdcc2e456" -H "s-
 
 ### PUT Object - Meta
  - 描述：更新一个已经存在的文件的附加meta信息。
- - * 注意：这个接口无法更新文件的基本信息，如文件的大小和类型等。*
+ - ***注意：这个接口无法更新文件的基本信息，如文件的大小和类型等。***
  - 请求格式：
 ```http
 PUT /<ObjectName>?meta&formatter=json HTTP/1.1
@@ -2138,7 +2138,7 @@ curl -v -T "acl.txt" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization:
 ### Initiate Multipart Upload
 
  - 描述：大文件分片上传初始化接口
- - * 注意：在初始化上传接口中要求必须进行用户认证，匿名用户无法使用该接口。在初始化上传时需要给定文件上传所需要的meta绑定信息，在后续的上传中该信息将被保留，并在最终完成时写入云存储系统。*
+ - ***注意：在初始化上传接口中要求必须进行用户认证，匿名用户无法使用该接口。在初始化上传时需要给定文件上传所需要的meta绑定信息，在后续的上传中该信息将被保留，并在最终完成时写入云存储系统。***
  - 请求格式：
 ```http
 POST /<ObjectName>?multipart&formatter=json HTTP/1.1
@@ -2217,7 +2217,7 @@ Etag: <Etag>
        
         </tbody>
     </table>
-  - * 注意：分片数不能超过2048。*
+  - ***注意：分片数不能超过2048。***
 
 
 ### Complete Multipart Upload
