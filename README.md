@@ -1323,7 +1323,7 @@ Content-Disposition: form-data; name="submit"
           <tr>
             <td>key</td>
             <td>
-            	object上传后的key（路径），例如：angel/\${filename}，变量\${filename}将被自动替换成被上传文件的文件名；当然也可以直接指定被上传文件存储在Sinastorage的文件名。如：angel/path/to/myfile.txt
+            	object上传后的key（路径），例如：angel/${filename}，变量${filename}将被自动替换成被上传文件的文件名；当然也可以直接指定被上传文件存储在Sinastorage的文件名。如：angel/path/to/myfile.txt
             </td>
             <td>Yes</td>
           </tr>    
@@ -1432,7 +1432,7 @@ Content-Disposition: form-data; name="submit"
 
   - 上传必须在”2014-04-10T08:55:34.000Z”之前。
   - 文件上传到名为”my-bucket-name”的bucket。
-  - starts-with：\$key必须以”my_prefix/”开始 (Policy中”\$key”前必须带”\$”)。若\$key值为空，文件名前无前缀。
+  - starts-with：$key必须以”my_prefix/”开始 (Policy中”$key”前必须带”$”)。若$key值为空，文件名前无前缀。
   - content-length-range：文件大小必须在指定范围内。
   - 最终将policy进行base64编码设置到表单Policy的value中。
   
