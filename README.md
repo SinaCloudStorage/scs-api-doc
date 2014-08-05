@@ -49,6 +49,7 @@
 * [Complete Multipart Upload](#complete-multipart-upload)
 * [List Parts](#list-parts)
 
+### [错误码大全](#错误码大全)
 
 ------
 
@@ -2389,6 +2390,436 @@ X-Requester: Your UserId
         </tbody>
 </table>
 
+
+## 错误码大全
+
+<table>
+	<thead>
+		<tr>
+			<td>Error Code</td>
+			<td>Description</td>
+			<td>HTTP Status Code</td>
+			<td>SOAP Fault Code Prefix</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>AccessDenied</td>
+			<td>Access Denied</td>
+			<td>403 Forbidden</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>AccountProblem</td>
+			<td>There is a problem with your AWS account that prevents the operation from completing successfully. Please contact customer service at webservices@amazon.com.</td>
+			<td>403 Forbidden</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>AmbiguousGrantByEmailAddress</td>
+			<td>The e-mail address you provided is associated with more than one account.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>BadDigest</td>
+			<td>The Content-MD5 you specified did not match what we received.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>BucketAlreadyExists</td>
+			<td>The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.</td>
+			<td>409 Conflict</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>BucketAlreadyOwnedByYou</td>
+			<td>Your previous request to create the named bucket succeeded and you already own it.</td>
+			<td>409 Conflict</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>BucketNotEmpty</td>
+			<td>The bucket you tried to delete is not empty.</td>
+			<td>409 Conflict</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>CredentialsNotSupported</td>
+			<td>This request does not support credentials.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>CrossLocationLoggingProhibited</td>
+			<td>Cross location logging not allowed. Buckets in one geographic location cannot log information to a bucket in another location.</td>
+			<td>403 Forbidden</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>EntityTooSmall</td>
+			<td>Your proposed upload is smaller than the minimum allowed object size.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>EntityTooLarge</td>
+			<td>Your proposed upload exceeds the maximum allowed object size.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>ExpiredToken</td>
+			<td>The provided token has expired.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>IncompleteBody</td>
+			<td>You did not provide the number of bytes specified by the Content-Length HTTP header</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>IncorrectNumberOfFilesInPostRequest</td>
+			<td>POST requires exactly one file upload per request.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InlineDataTooLarge</td>
+			<td>Inline data exceeds the maximum allowed size.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InternalError</td>
+			<td>We encountered an internal error. Please try again.</td>
+			<td>500 Internal Server Error</td>
+			<td>Server</td>
+		</tr>
+		<tr>
+			<td>InvalidAccessKeyId</td>
+			<td>The AWS Access Key Id you provided does not exist in our records.</td>
+			<td>403 Forbidden</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidAddressingHeader</td>
+			<td>You must specify the Anonymous role.</td>
+			<td>N/A</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidArgument</td>
+			<td>Invalid Argument</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidBucketName</td>
+			<td>The specified bucket is not valid.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidDigest</td>
+			<td>The Content-MD5 you specified was an invalid.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidLocationConstraint</td>
+			<td>The specified location constraint is not valid.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidPart</td>
+			<td>One or more of the specified parts could not be found.The part might not have been uploaded, or the specified entity tag might not have matched the part's entity tag.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidPartOrder</td>
+			<td>The list of parts was not in ascendingorder. Parts list must specified in order by part number.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidPayer</td>
+			<td>All access to this object has been disabled.</td>
+			<td>403 Forbidden</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidPolicyDocument</td>
+			<td>The content of the form does not meet the conditions specified in the policy document.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidRange</td>
+			<td>The requested range cannot be satisfied.</td>
+			<td>416 Requested Range Not Satisfiable</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidSecurity</td>
+			<td>The provided security credentials are not valid.</td>
+			<td>403 Forbidden</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidSOAPRequest</td>
+			<td>The SOAP request body is invalid.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidStorageClass</td>
+			<td>The storage class you specified is not valid.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidTargetBucketForLogging</td>
+			<td>The target bucket for logging does not exist, is not owned by you, or does not have the appropriate grants for the log-delivery group.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidToken</td>
+			<td>The provided token is malformed or otherwise invalid.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>InvalidURI</td>
+			<td>Couldn't parse the specified URI.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>KeyTooLong</td>
+			<td>Your key is too long.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MalformedACLError</td>
+			<td>The XML you provided was not well-formed or did not validate against our published schema.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MalformedACLError</td>
+			<td>The XML you provided was not well-formed or did not validate against our published schema.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MalformedPOSTRequest</td>
+			<td>The body of your POST request is not well-formed multipart/form-data.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MalformedXML</td>
+			<td>This happens when the user sends a malformed xml (xml that doesn't conform to the published xsd) for the configuration. The error message is, "The XML you provided was not well-formed or did not validate against our published schema."</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MaxMessageLengthExceeded</td>
+			<td>Your request was too big.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MaxPostPreDataLengthExceededError</td>
+			<td>Your POST request fields preceding the upload file were too large.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MetadataTooLarge</td>
+			<td>Your metadata headers exceed the maximum allowed metadata size.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MethodNotAllowed</td>
+			<td>The specified method is not allowed against this resource.</td>
+			<td>405 Method Not Allowed</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MissingAttachment</td>
+			<td>A SOAP attachment was expected, but none were found.</td>
+			<td>N/A</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MissingContentLength</td>
+			<td>You must provide the Content-Length HTTP header.</td>
+			<td>411 Length Required</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MissingRequestBodyError</td>
+			<td>This happens when the user sends an empty xml document as a request. The error message is, "Request body is empty."</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MissingSecurityElement</td>
+			<td>The SOAP 1.1 request is missing a security element.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>MissingSecurityHeader</td>
+			<td>Your request was missing a required header.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>NoLoggingStatusForKey</td>
+			<td>There is no such thing as a logging status sub-resource for a key.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>NoSuchBucket</td>
+			<td>The specified bucket does not exist.</td>
+			<td>404 Not Found</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>NoSuchKey</td>
+			<td>The specified key does not exist.</td>
+			<td>404 Not Found</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>NoSuchUpload</td>
+			<td>The specified multipart upload does not exist. The upload ID might be invalid, or the multipart upload might have been aborted or completed.</td>
+			<td>404 Not Found</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>NotImplemented</td>
+			<td>A header you provided implies functionality that is not implemented.</td>
+			<td>501 Not Implemented</td>
+			<td>Server</td>
+		</tr>
+		<tr>
+			<td>NotSignedUp</td>
+			<td>Your account is not signed up for the Amazon?S3 service. You must sign up before you can use Amazon?S3. You can sign up at the following URL: http://aws.amazon.com/s3</td>
+			<td>403 Forbidden</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>OperationAborted</td>
+			<td>A conflicting conditional operation is currently in progress against this resource. Please try again.</td>
+			<td>409 Conflict</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>PermanentRedirect</td>
+			<td>The bucket you are attempting to access must be addressed using the specified endpoint. Please send all future requests to this endpoint.</td>
+			<td>301 Moved Permanently</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>PreconditionFailed</td>
+			<td>At least one of the pre-conditions you specified did not hold.</td>
+			<td>412 Precondition Failed</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>Redirect</td>
+			<td>Temporary redirect.</td>
+			<td>307 Moved Temporarily</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>RequestIsNotMultiPartContent</td>
+			<td>Bucket POST must be of the enclosure-type multipart/form-data.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>RequestTimeout</td>
+			<td>Your socket connection to the server was not read from or written to within the timeout period.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>RequestTimeTooSkewed</td>
+			<td>The difference between the request time and the server's time is too large.</td>
+			<td>403 Forbidden</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>RequestTorrentOfBucketError</td>
+			<td>Requesting the torrent file of a bucket is not permitted.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>SignatureDoesNotMatch</td>
+			<td>The request signature we calculated does not match the signature you provided. Check your AWS Secret Access Key and signing method. For more information, see Authenticating REST Requests and Authenticating SOAP Requests for details.</td>
+			<td>403 Forbidden</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>SlowDown</td>
+			<td>Please reduce your request rate.</td>
+			<td>503 Service Unavailable</td>
+			<td>Server</td>
+		</tr>
+		<tr>
+			<td>TemporaryRedirect</td>
+			<td>You are being redirected to the bucket while DNS updates.</td>
+			<td>307 Moved Temporarily</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>TokenRefreshRequired</td>
+			<td>The provided token must be refreshed.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>TooManyBuckets</td>
+			<td>You have attempted to create more buckets than allowed.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>UnexpectedContent</td>
+			<td>This request does not support content.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>UnresolvableGrantByEmailAddress</td>
+			<td>The e-mail address you provided does not match any account on record.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+		<tr>
+			<td>UserKeyMustBeSpecified</td>
+			<td>The bucket POST must contain the specified field name. If it is specified, please check the order of the fields.</td>
+			<td>400 Bad Request</td>
+			<td>Client</td>
+		</tr>
+
+	</tbody>
+</table>
 
 [1]: http://open.sinastorage.com/?c=doc&a=guide&section=sign
 [2]: http://open.sinastorage.com/?c=doc&a=guide&section=acl
