@@ -2396,10 +2396,10 @@ X-Requester: Your UserId
 <table>
 	<thead>
 		<tr>
-			<td>Error Code</td>
-			<td>Description</td>
-			<td>HTTP Status Code</td>
-			<td>SOAP Fault Code Prefix</td>
+			<th>Error Code</td>
+			<th>Description</td>
+			<th>HTTP Status Code</td>
+			<th>SOAP Fault Code Prefix</td>
 		</tr>
 	</thead>
 	<tbody>
