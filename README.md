@@ -60,14 +60,14 @@
  - 请求格式：
 ```http
 GET /?formatter=json HTTP/1.1
-Host: sinastorage.cn
+Host: sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
 或者
 ```http
 GET /<Your-Bucket-Name>/?formatter=json HTTP/1.1
-Host: sinastorage.cn
+Host: sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -145,11 +145,11 @@ Authorization: <authorization string> #请参照《签名算法》
 
  - 请求示例：
 ``` 
-curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://sinastorage.cn/?formatter=json"
+curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://sinacloud.net/?formatter=json"
 ```
 或者
 ```    
-curl -v "http://sinastorage.cn/?KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v "http://sinacloud.net/?KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```
  - 响应示例：
 ```http
@@ -196,14 +196,14 @@ X-Requester: Your UserId
 
 ```http
 GET /?formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
 或者
 ```php
 GET /<Your-Bucket-Name>/?formatter=json HTTP/1.1
-Host: sinastorage.cn
+Host: sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -419,7 +419,7 @@ sai/readme.txt
 使用prefix指定以join/为开头的文件：
 ```http
 GET /?prefix=join/&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -437,7 +437,7 @@ Contents:
 使用delimiter指定折叠方式为‘/’：
 ```http
 GET /?delimiter=/&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -453,7 +453,7 @@ CommonPrefix:
 使用prefix指定以join/为开头的文件，同时使用delimiter指定折叠方式为‘/’：
 ```http
 GET /?prefix=join/&delimiter=/&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -471,7 +471,7 @@ CommonPrefix:
 使用max-keys做最大值列表长度限制：
 ```http
 GET /?prefix=join/&delimiter=/&max-keys=4&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -489,7 +489,7 @@ CommonPrefix:
 使用marker继续获得之前的列操作的后续结果：
 ```http
 GET /?prefix=join/&delimiter=/&max-keys=4&marker=join/userlist.txt&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -506,7 +506,7 @@ Contents:
  - 请求格式：
 ```http
 GET /?meta&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -563,14 +563,14 @@ X-Requester: Your UserId
 ```
  - 请求示例：
 ```
-curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/?meta&formatter=json"
+curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/?meta&formatter=json"
 ```
 ### PUT Bucket
  - 描述：创建一个Bucket。
  - 请求格式：
 ```http
 PUT /?formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 x-amz-acl: <Canned-ACL> #请参照《ACL》
@@ -578,7 +578,7 @@ x-amz-acl: <Canned-ACL> #请参照《ACL》
 或者
 ```http
 PUT /<Your-Bucket-Name>/?formatter=json HTTP/1.1
-Host: sinastorage.cn
+Host: sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 x-amz-acl: <Canned-ACL> #请参照《ACL》
@@ -614,15 +614,15 @@ X-Requester: Your UserId
 ```
  - 请求示例：
 ```
-curl -v -X PUT -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/?formatter=json"
+curl -v -X PUT -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/?formatter=json"
 ```
 或者
 ```
-curl -v -X PUT "http://<Your-Bucket-Name>.sinastorage.cn/?KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v -X PUT "http://<Your-Bucket-Name>.sinacloud.net/?KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```
 或者
 ```
-curl -v -X PUT "http://sinastorage.cn/<Your-Bucket-Name>/?KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v -X PUT "http://sinacloud.net/<Your-Bucket-Name>/?KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```
 
 ### DELETE Bucket
@@ -631,14 +631,14 @@ curl -v -X PUT "http://sinastorage.cn/<Your-Bucket-Name>/?KID=sina,<access_key>&
  - 请求格式：
 ```http
 DELETE /?formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
 或者
 ```http
 DELETE /<Your-Bucket-Name>/?formatter=json HTTP/1.1
-Host: sinastorage.cn
+Host: sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -653,15 +653,15 @@ X-Requester: Your UserId
 ```
 请求示例：
 ```
-curl -v -X DELETE -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/?formatter=json"
+curl -v -X DELETE -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/?formatter=json"
 ```
 或者
 ```
-curl -v -X DELETE "http://<Your-Bucket-Name>.sinastorage.cn/?KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v -X DELETE "http://<Your-Bucket-Name>.sinacloud.net/?KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```
 或者
 ```
-curl -v -X DELETE "http://sinastorage.cn/<Your-Bucket-Name>/?KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v -X DELETE "http://sinacloud.net/<Your-Bucket-Name>/?KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```
 
 ### GET Bucket ACL
@@ -669,14 +669,14 @@ curl -v -X DELETE "http://sinastorage.cn/<Your-Bucket-Name>/?KID=sina,<access_ke
  - 请求格式：
 ```http
 GET /?acl&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
 或者
 ```http
 GET /<Your-Bucket-Name>/?acl&formatter=json HTTP/1.1
-Host: sinastorage.cn
+Host: sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -734,15 +734,15 @@ X-Requester: Your UserId
  - 响应格式说明请参照：[《ACL》][2]
  - 请求示例：
 ```
-curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/?acl&formatter=json"
+curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/?acl&formatter=json"
 ```
 或者
 ```
-curl -v "http://<Your-Bucket-Name>.sinastorage.cn/?acl&KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v "http://<Your-Bucket-Name>.sinacloud.net/?acl&KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```
 或者
 ```
-curl -v "http://sinastorage.cn/<Your-Bucket-Name>/?acl&KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
+curl -v "http://sinacloud.net/<Your-Bucket-Name>/?acl&KID=sina,<access_key>&Expires=1398873316&ssig=<ssig>&formatter=json"
 ```  
 
 ### PUT Bucket ACL
@@ -750,7 +750,7 @@ curl -v "http://sinastorage.cn/<Your-Bucket-Name>/?acl&KID=sina,<access_key>&Exp
  - 请求格式：
 ```http
 PUT /?acl&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 
@@ -772,7 +772,7 @@ X-Requester: Your UserId
  - 请求格式说明请参照：[《ACL》][2]
  - 请求示例：
 ```
-curl -v -T "acl.txt" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/?acl&formatter=json"
+curl -v -T "acl.txt" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/?acl&formatter=json"
 ```
 
 ## Object操作
@@ -782,7 +782,7 @@ curl -v -T "acl.txt" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization:
  - 请求格式：
 ```http
 HEAD /<ObjectName>?formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -913,7 +913,7 @@ x-amz-meta-foo2: <value2> #自定义meta：foo2
 
  - 请求示例：
 ```
-curl -v -X HEAD -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/<Object-Name>?formatter=json"
+curl -v -X HEAD -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/<Object-Name>?formatter=json"
 ```
 
 ### GET Object
@@ -921,7 +921,7 @@ curl -v -X HEAD -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA
  - 请求格式：
 ```http
 GET /<ObjectName>?formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 Range: bytes=<byte_range> #支持断点下载
@@ -1056,13 +1056,13 @@ x-amz-meta-foo2: <value2> #自定义meta：foo2
 
  - 请求示例：
 ```
-curl -v -H "Range: bytes=0-1024" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/<Object-Name>?formatter=json"
+curl -v -H "Range: bytes=0-1024" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/<Object-Name>?formatter=json"
 ```
  - 应用举例：
   * 标准示例：
 ```http
 GET /my_bucket/path/to/my/file.txt?formatter=json HTTP/1.1
-Host: sinastorage.cn
+Host: sinacloud.net
 Date: Sun, 1 Jan 2006 12:00:00 GMT
 Authorization: SINA AccessKey:ssig
 Range: bytes=100-2048
@@ -1090,7 +1090,7 @@ file_content
    * 使用各种验证措施的下载方式：
 ```http
 GET /path/to/my/file.txt?KID=sae,youraccount&Expires=1175139620&ssig=your_ssig&ip=time,ipaddress&fn=filename.txt&formatter=json HTTP/1.1
-Host: my_bucket.sinastorage.cn
+Host: my_bucket.sinacloud.net
 Date: date
 Range: bytes=byte_range
 ```
@@ -1120,7 +1120,7 @@ file_content
  - 请求格式：
 ```http
 PUT /<ObjectName>?formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Content-Length: <object data length>
 Content-Type: <mime-type>
@@ -1262,7 +1262,7 @@ X-Requester: Your UserId
 </table>
  - 请求示例：
 ```
-curl -v -T "myfile.txt" -H "x-amz-meta-UploadLocation: My Home" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/path/to/myfile.txt?formatter=json"
+curl -v -T "myfile.txt" -H "x-amz-meta-UploadLocation: My Home" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/path/to/myfile.txt?formatter=json"
 ```
 
 ### POST Object
@@ -1270,7 +1270,7 @@ curl -v -T "myfile.txt" -H "x-amz-meta-UploadLocation: My Home" -H "Date: Sat, 2
  - 请求格式：
 ```http
 POST / HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Content-Length: <length>
 
 Content-Type:multipart/form-data; boundary=----WebKitFormBoundary1dIjDASRYXQm6DNA
@@ -1447,7 +1447,7 @@ Content-Disposition: form-data; name="submit"
   - 将最终的值设置到表单Signature的value中。
  - 最终生成的html表单：
 ```html
-<form method="post" action="http://my-bucket.sinastorage.cn/" enctype="multipart/form-data">
+<form method="post" action="http://my-bucket.sinacloud.net/" enctype="multipart/form-data">
     <input type="hidden" name="AWSAccessKeyId" value="您的accesskey" />
     <input type="hidden" name="key" value="my_prefix/${filename}" />
     <input type="hidden" name="acl" value="private" />
@@ -1469,7 +1469,7 @@ Content-Disposition: form-data; name="submit"
  - 请求格式：
 ```http
 PUT /<ObjectName>?formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 x-amz-copy-source: </source-bucket/source-object>
 x-amz-metadata-directive: <metadata-directive>
@@ -1610,7 +1610,7 @@ X-Requester: Your UserId
 
  - 请求示例：
 ```
-curl -v -X PUT -H "x-amz-copy-source: /bucket-123/path/to/file123.txt" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/path/to/myfile.txt?formatter=json"
+curl -v -X PUT -H "x-amz-copy-source: /bucket-123/path/to/file123.txt" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/path/to/myfile.txt?formatter=json"
 ```
 
 ### PUT Object - Relax
@@ -1618,7 +1618,7 @@ curl -v -X PUT -H "x-amz-copy-source: /bucket-123/path/to/file123.txt" -H "Date:
  - 请求格式：
 ```http
 PUT /<ObjectName>?relax&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Content-Length: 0
 Content-Type: <mime-type>
@@ -1749,7 +1749,7 @@ X-Requester: Your UserId
 </table>
  - 请求示例：
 ```
-curl -v -X PUT -H "s-sina-sha1: 00fd4b4549a1094aae926ef62e9dbd3cdcc2e456" -H "s-sina-length: 1122" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/path/to/myfile.txt?relax&formatter=json"
+curl -v -X PUT -H "s-sina-sha1: 00fd4b4549a1094aae926ef62e9dbd3cdcc2e456" -H "s-sina-length: 1122" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/path/to/myfile.txt?relax&formatter=json"
 ```
 
 ### PUT Object - Meta
@@ -1758,7 +1758,7 @@ curl -v -X PUT -H "s-sina-sha1: 00fd4b4549a1094aae926ef62e9dbd3cdcc2e456" -H "s-
  - 请求格式：
 ```http
 PUT /<ObjectName>?meta&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Content-Length: 0
 x-amz-meta-foo1: <foo1-value>
@@ -1875,7 +1875,7 @@ X-Requester: Your UserId
 </table>
  - 请求示例：
 ```
-curl -v -X PUT -H "x-amz-meta-UploadLocation: My Home" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/path/to/myfile.txt?meta&formatter=json"
+curl -v -X PUT -H "x-amz-meta-UploadLocation: My Home" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/path/to/myfile.txt?meta&formatter=json"
 ```
 
 ### GET Object - Meta
@@ -1883,7 +1883,7 @@ curl -v -X PUT -H "x-amz-meta-UploadLocation: My Home" -H "Date: Sat, 20 Nov 228
  - 请求格式：
 ```http
 GET /<ObjectName>?meta&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -2014,7 +2014,7 @@ X-Requester: Your UserId
 
  - 请求示例：
 ```
-curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/path/to/myfile.txt?meta&formatter=json"
+curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/path/to/myfile.txt?meta&formatter=json"
 ```
 
 ### DELETE Object
@@ -2022,7 +2022,7 @@ curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access
  - 请求格式：
 ```http
 DELETE /<ObjectName>?formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -2037,7 +2037,7 @@ X-Requester: Your UserId
 ```
  - 请求示例：
 ```
-curl -v -X DELETE -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/path/to/my/file.txt?formatter=json"
+curl -v -X DELETE -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/path/to/my/file.txt?formatter=json"
 ```
 
 ### GET Object ACL
@@ -2045,7 +2045,7 @@ curl -v -X DELETE -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SI
  - 请求格式：
 ```http
 GET /<ObjectName>?acl&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
@@ -2103,7 +2103,7 @@ X-Requester: Your UserId
  - 响应格式说明请参照：[《ACL》][2]
  - 请求示例：
 ```
-curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/path/to/my/file.txt?acl&formatter=json"
+curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/path/to/my/file.txt?acl&formatter=json"
 ```
 
 ### PUT Object ACL
@@ -2111,7 +2111,7 @@ curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access
  - 请求格式：
 ```htt[
 PUT /<ObjectName>?acl&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 
@@ -2133,7 +2133,7 @@ X-Requester: Your UserId
  - 请求格式说明请参照：[《ACL》][2]
  - 请求示例：
 ```
-curl -v -T "acl.txt" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/path/to/my/file.txt?acl&formatter=json"
+curl -v -T "acl.txt" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/path/to/my/file.txt?acl&formatter=json"
 ```
 
 ### Initiate Multipart Upload
@@ -2143,7 +2143,7 @@ curl -v -T "acl.txt" -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization:
  - 请求格式：
 ```http
 POST /<ObjectName>?multipart&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Content-Type: <mime-type>
 x-amz-meta-foo1: <value1> #自定义meta：foo1
@@ -2166,7 +2166,7 @@ X-Requester: Your UserId
 ```
  - 请求示例：
 ```
-curl -v -X POST "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinastorage.cn/path/to/my/file.txt?multipart&formatter=json"
+curl -v -X POST "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/path/to/my/file.txt?multipart&formatter=json"
 ```
 
 ### Upload Part
@@ -2174,7 +2174,7 @@ curl -v -X POST "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <a
  - 请求格式：
 ```http
 PUT /<ObjectName>?partNumber=<PartNumber>&uploadId=<UploadId>&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Content-Length: <Content-Length>
 Content-MD5: <Content-MD5>
@@ -2226,7 +2226,7 @@ Etag: <Etag>
  - 请求格式：
 ```http
 POST /<ObjectName>?uploadId=<UploadId>&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Content-Type: text/json
 Authorization: <authorization string> #请参照《签名算法》
@@ -2319,7 +2319,7 @@ X-Requester: Your UserId
  - 请求格式：
 ```http
 GET /<ObjectName>?uploadId=<UploadId>&formatter=json HTTP/1.1
-Host: <Your-Bucket-Name>.sinastorage.cn
+Host: <Your-Bucket-Name>.sinacloud.net
 Date: <date>
 Authorization: <authorization string> #请参照《签名算法》
 ```
