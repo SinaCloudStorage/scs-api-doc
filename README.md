@@ -566,7 +566,7 @@ X-Requester: Your UserId
 curl -v -H "Date: Sat, 20 Nov 2286 17:46:39 GMT" -H "Authorization: SINA <access_key>:<ssig>" "http://<Your-Bucket-Name>.sinacloud.net/?meta&formatter=json"
 ```
 ### PUT Bucket
- - 描述：创建一个Bucket。
+ - 描述：创建一个Bucket。(注意：内部用户创建项目(Bucket)请务必走提案来申请项目，不可调用此方法来创建)
  - 请求格式：
 ```http
 PUT /?formatter=json HTTP/1.1
